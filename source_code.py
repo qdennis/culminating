@@ -4,6 +4,7 @@ from pygame.font import *
 
 # display
 pygame.init()
+pygame.mixer.init(frequency=44100, size=-16, channels=2, buffer=512)
 info_object = pygame.display.Info()
 
 width, height = info_object.current_w, info_object.current_h
@@ -22,15 +23,15 @@ pygame.mouse.set_visible(False)
 
 # buttons
 play_button = pygame.image.load('play_button4x.png')  # play button
-play_button_rect = play_button.get_rect(center=(info_object.current_w // 2, info_object.current_h // 2))
+play_button_rect = play_button.get_rect(center=(info_object.current_w // 2, info_object.current_h // 2 + 150))
 pressed_play_button = pygame.image.load('pressed_play.png')
 
 settings_button = pygame.image.load('settings_button.png')  # settings button
-settings_button_rect = settings_button.get_rect(center=(info_object.current_w // 2, (info_object.current_h // 2) + 150))
+settings_button_rect = settings_button.get_rect(center=(info_object.current_w // 2, (info_object.current_h // 2) + 300))
 pressed_settings_button = pygame.image.load('pressed_settings.png')
 
 credits_button = pygame.image.load('credits_button.png')  # credits button
-credits_button_rect = credits_button.get_rect(center=(info_object.current_w // 2, (info_object.current_h // 2) + 300))
+credits_button_rect = credits_button.get_rect(center=(info_object.current_w // 2, (info_object.current_h // 2) + 450))
 pressed_credits_button = pygame.image.load('pressed_credits.png')
 
 fps_30 = pygame.image.load('30_fps_button.png')  # 30 fps button
@@ -63,6 +64,9 @@ volume_slider = pygame.image.load('vol_slider.png')
 volume_x, volume_y = info_object.current_w // 2, (info_object.current_h // 2) - 100
 volume_slider_rect = volume_slider.get_rect(center=(volume_x, volume_y))
 
+menu_background = pygame.image.load('menu_background.png')
+menu_background_rect = menu_background.get_rect(center=(info_object.current_w // 2, (info_object.current_h // 2)))
+
 # settings page
 settings_page = pygame.image.load('settings_page.png')
 settings_page_rect = settings_page.get_rect(center=(info_object.current_w // 2, (info_object.current_h // 2)))
@@ -71,6 +75,13 @@ settings_page_rect = settings_page.get_rect(center=(info_object.current_w // 2, 
 current_screen = 'main menu'
 running = True
 slider_dragging = False  # track if the slider is being dragged
+
+# sound
+
+background_music = pygame.mixer.music.load('background_music.mp3')
+pygame.mixer.music.set_volume(0.5)
+pygame.mixer.music.play(-1)
+button_click = pygame.mixer.Sound('button_sound.mp3')
 
 # main code
 while running:
@@ -92,13 +103,17 @@ while running:
             current_cursor = cursor_up  # revert to default cursor
             if current_screen == 'main menu':
                 if play_button_rect.collidepoint(mouse_position):  # button click detection
+                    button_click.play()
                     current_screen = 'play'
                 elif settings_button_rect.collidepoint(mouse_position):
+                    button_click.play()
                     current_screen = 'settings'
                 elif credits_button_rect.collidepoint(mouse_position):
+                    button_click.play()
                     current_screen = 'credits'
             elif current_screen == 'settings':
                 if backbutton_rect.collidepoint(mouse_position):  # back button
+                    button_click.play()
                     current_screen = 'main menu'
                 elif fps_30_rect.collidepoint(mouse_position):  # change FPS
                     fps = 30
@@ -111,9 +126,12 @@ while running:
                 volume_x = mouse_position[0]
                 volume_x = max(316, min(mouse_position[0], 1597))
                 volume_slider_rect.centerx = volume_x  # update slider rect position
+                volume_level = (volume_x - 316) / (1597 - 316)  # calculates the volume of the music based on position of the slider
+                pygame.mixer.music.set_volume(volume_level) # sets music volume
 
     # menu pages
     if current_screen == 'main menu':
+        screen.blit(menu_background, menu_background_rect)   # main menu image
         screen.blit(play_button, play_button_rect)  # main menu buttons
         screen.blit(settings_button, settings_button_rect)
         screen.blit(credits_button, credits_button_rect)
@@ -126,6 +144,7 @@ while running:
             screen.blit(pressed_credits_button, credits_button_rect)
 
     elif current_screen == 'settings':
+        screen.blit(menu_background, menu_background_rect) # main menu image
         screen.blit(settings_page, settings_page_rect)  # settings image page
         screen.blit(fps_30, fps_30_rect)  # FPS buttons
         screen.blit(fps_60, fps_60_rect)
