@@ -49,7 +49,12 @@ fps_144_pressed = pygame.image.load('144_fps_pressed.png')
 backbutton = pygame.image.load('backbutton.png')
 backbutton_rect1 = backbutton.get_rect(center=(info_object.current_w // 2 - 550, (info_object.current_h // 2 - 325)))
 backbutton_rect2 = backbutton.get_rect(center=(info_object.current_w // 2 - 850, (info_object.current_h // 2 - 450)))
+backbutton_rect3 = backbutton.get_rect(center=(info_object.current_w // 2 - 550, (info_object.current_h // 2 - 325)))
 backbutton_pressed = pygame.image.load('backbutton_hover.png')
+
+menu_button = pygame.image.load('menu.png')
+menu_button_rect = menu_button.get_rect(center=(info_object.current_w // 2 - 800, (info_object.current_h // 2 - 450)))
+menu_button_pressed = pygame.image.load('pressed_menu.png')
 
 # images
 fps_text = pygame.image.load('fps_display.png')
@@ -80,6 +85,7 @@ settings_page_rect = settings_page.get_rect(center=(info_object.current_w // 2, 
 current_screen = 'main menu'
 running = True
 slider_dragging = False  # track if the slider is being dragged
+open_settings = False
 
 # sound
 
@@ -87,6 +93,9 @@ background_music = pygame.mixer.music.load('background_music.mp3')
 pygame.mixer.music.set_volume(0.5)
 pygame.mixer.music.play(-1)
 button_click = pygame.mixer.Sound('button_sound.mp3')
+
+# settings page
+
 
 # main code
 while running:
@@ -103,6 +112,8 @@ while running:
             current_cursor = cursor_down  # click detection
             if current_screen == 'settings' and volume_slider_rect.collidepoint(mouse_position):
                 slider_dragging = True  # start dragging the slider
+            elif current_screen == 'play' and volume_slider_rect.collidepoint(mouse_position):
+                slider_dragging = True  
         elif event.type == pygame.MOUSEBUTTONUP:
             slider_dragging = False  # stop dragging the slider
             current_cursor = cursor_up  # revert to default cursor
@@ -116,6 +127,7 @@ while running:
                 elif credits_button_rect.collidepoint(mouse_position):
                     button_click.play()
                     current_screen = 'credits'
+
             elif current_screen == 'settings':
                 if backbutton_rect1.collidepoint(mouse_position):  # back button
                     button_click.play()
@@ -126,10 +138,24 @@ while running:
                     fps = 60
                 elif fps_144_rect.collidepoint(mouse_position):
                     fps = 144
+
             elif current_screen == 'credits':
                 if backbutton_rect2.collidepoint(mouse_position):
                     button_click.play()
                     current_screen = 'main menu'
+
+            elif current_screen == 'play':
+                if menu_button_rect.collidepoint(mouse_position):
+                    open_settings = True    # opens up settings menu
+                if backbutton_rect3.collidepoint(mouse_position):
+                    open_settings = False
+                elif fps_30_rect.collidepoint(mouse_position):  # change FPS
+                    fps = 30
+                elif fps_60_rect.collidepoint(mouse_position):
+                    fps = 60
+                elif fps_144_rect.collidepoint(mouse_position):
+                    fps = 144
+
         elif event.type == pygame.MOUSEMOTION:
             if slider_dragging:  # if dragging, update the slider position
                 volume_x = mouse_position[0]
@@ -181,7 +207,33 @@ while running:
             screen.blit(backbutton_pressed, backbutton_rect2)
 
     elif current_screen == 'play':
-        pass
+        screen.blit(menu_button, menu_button_rect)
+
+        if menu_button_rect.collidepoint(mouse_position):
+            screen.blit(menu_button_pressed, menu_button_rect)
+        if open_settings:
+            screen.blit(settings_page, settings_page_rect)  # settings image page
+            screen.blit(fps_30, fps_30_rect)  # FPS buttons
+            screen.blit(fps_60, fps_60_rect)
+            screen.blit(fps_144, fps_144_rect)
+            screen.blit(fps_text, fps_text_rect)  # settings text
+            screen.blit(master_vol, master_vol_rect)    # audio text
+            screen.blit(volume_bar, volume_bar_rect)
+            screen.blit(volume_slider, volume_slider_rect)  # audio slider
+            screen.blit(backbutton, backbutton_rect1)
+
+            if fps_30_rect.collidepoint(mouse_position):  # hover feature for FPS buttons
+                screen.blit(fps_30_pressed, fps_30_rect)
+            if fps_60_rect.collidepoint(mouse_position):
+                screen.blit(fps_60_pressed, fps_60_rect)
+            if fps_144_rect.collidepoint(mouse_position):
+                screen.blit(fps_144_pressed, fps_144_rect)
+            if backbutton_rect3.collidepoint(mouse_position):
+                screen.blit(backbutton_pressed, backbutton_rect3)
+        else:
+            pass
+        
+
         ####################
         # INSERT GAME HERE #
         ####################
