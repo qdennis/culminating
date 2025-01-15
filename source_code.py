@@ -546,34 +546,6 @@ def selecting_moves_menu():
         clock.tick(fps)
         pygame.display.flip()
 
-# gui/cursor functions
-def game_menu():
-    screen.blit(menu_button, menu_button_rect)
-
-    if menu_button_rect.collidepoint(mouse_position):
-        screen.blit(menu_button_pressed, menu_button_rect)
-    if open_settings:   
-        screen.blit(settings_page, settings_page_rect)  
-        screen.blit(fps_30, fps_30_rect)  
-        screen.blit(fps_60, fps_60_rect)
-        screen.blit(fps_144, fps_144_rect)
-        screen.blit(fps_text, fps_text_rect)  
-        screen.blit(master_vol, master_vol_rect)    
-        screen.blit(volume_bar, volume_bar_rect)
-        screen.blit(volume_slider, volume_slider_rect)  
-        screen.blit(backbutton, backbutton_rect1)
-        screen.blit(exit_button, exit_button_rect)  
-
-        if fps_30_rect.collidepoint(mouse_position):  
-            screen.blit(fps_30_pressed, fps_30_rect)
-        if fps_60_rect.collidepoint(mouse_position):
-            screen.blit(fps_60_pressed, fps_60_rect)
-        if fps_144_rect.collidepoint(mouse_position):
-            screen.blit(fps_144_pressed, fps_144_rect)
-        if backbutton_rect3.collidepoint(mouse_position):
-            screen.blit(backbutton_pressed, backbutton_rect3)
-        if exit_button_rect.collidepoint(mouse_position):
-            screen.blit(exit_button_pressed, exit_button_rect)
 # worlds/cities
 def world_one(x=100, y=900):
     global image, jumping, up, down, player_health, player_total_health, walk_speed, money, running, slider_dragging, open_settings, current_cursor, fps, current_screen, mouse_position, walking
