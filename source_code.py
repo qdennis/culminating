@@ -591,7 +591,8 @@ def world_one(x=100, y=900):
     while walking:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                quit()
+                pygame.quit()
+                exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 current_cursor = cursor_down  
                 if current_screen == 'play' and volume_slider_rect.collidepoint(mouse_position):
@@ -745,7 +746,8 @@ def world_two(x=100, y=940):
     while walking:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                quit()
+                pygame.quit()
+                exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 current_cursor = cursor_down  
                 if current_screen == 'play' and volume_slider_rect.collidepoint(mouse_position):
@@ -912,7 +914,8 @@ def city_one(x=100, y=940):
     while walking:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                quit()
+                pygame.quit()
+                exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 current_cursor = cursor_down  
                 if current_screen == 'play' and volume_slider_rect.collidepoint(mouse_position):
@@ -943,6 +946,13 @@ def city_one(x=100, y=940):
                         elif fps_144_rect.collidepoint(mouse_position):
                             button_click.play()
                             fps = 144
+            elif event.type == pygame.MOUSEMOTION:
+                if slider_dragging:  # if dragging, update the slider position
+                    volume_x = mouse_position[0]
+                    volume_x = max(316, min(mouse_position[0], 1597))
+                    volume_slider_rect.centerx = volume_x  # update slider rect position
+                    volume_level = (volume_x - 316) / (1597 - 316)  # calculates the volume of the music based on position of the slider
+                    pygame.mixer.music.set_volume(volume_level) # sets music volume
         keys = pygame.key.get_pressed()
         screen.blit(city_one_background, (0, 0))
         screen.blit(image, image_rect)
@@ -951,10 +961,10 @@ def city_one(x=100, y=940):
                 world_one()
             elif keys[K_1]:
                 world_two()
-        if image_rect.x >= 1880:
+        if image_rect.x >= 1840:
             if keys[K_a]:
                 image_rect.x -= 10
-        if image_rect.x <= 0:
+        elif image_rect.x <= 0:
             world_two(1880, 940)
             jumping = False
             walking = False
