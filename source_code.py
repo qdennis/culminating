@@ -12,7 +12,7 @@ info_object = pygame.display.Info()
 width, height = info_object.current_w, info_object.current_h
 
 screen = pygame.display.set_mode((width, height))
-fps = 144
+fps = 60
 pygame.display.set_caption('Mastering Balance')
 clock = pygame.time.Clock()
 
@@ -579,13 +579,14 @@ def world_one(x=100, y=900):
     global image, jumping, up, down, player_health, player_total_health, walk_speed, money, running, slider_dragging, open_settings, current_cursor, fps, current_screen, mouse_position, walking
     if walking == False:
         pass
+    screen.blit(menu_background, menu_background_rect)
+    encounter_loading()
     screen.blit(world_one_background, (0, 0))
     image_rect = image.get_rect()
     image_rect.center = (x, y)
     image = pygame.transform.scale(image, (80, 144))
     walking = True
     jumping = False
-    encounter_loading()
     walk_speed = 10
     while walking:
         for event in pygame.event.get():
