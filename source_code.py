@@ -606,7 +606,7 @@ def world_one(x=100, y=900):
                         button_click.play()
                         current_screen = 'main menu'
                         open_settings = False
-                        return walking == False
+                        walking = False
                     if menu_button_rect.collidepoint(mouse_position):
                         button_click.play()
                         open_settings = True  
@@ -761,7 +761,7 @@ def world_two(x=100, y=940):
                         button_click.play()
                         current_screen = 'main menu'
                         open_settings = False
-                        return walking == False
+                        walking = False
                     if menu_button_rect.collidepoint(mouse_position):
                         button_click.play()
                         open_settings = True  
