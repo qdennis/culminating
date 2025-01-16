@@ -762,6 +762,10 @@ def world_two(x=100, y=940):
         screen.blit(world_two_background, (0, 0))
         screen.blit(capybara_enemy, (550, 400))
         screen.blit(image, image_rect)
+        money_text = large_font.render("$ " + str(money), True, Green)
+        money_text_rect = money_text.get_rect()
+        money_text_rect.topleft=(1740, 40)
+        screen.blit(money_text, money_text_rect)
         if keys[K_p]:
             if keys[K_0]:
                 world_one()
@@ -928,6 +932,10 @@ def city_one(x=100, y=940):
         keys = pygame.key.get_pressed()
         screen.blit(city_one_background, (0, 0))
         screen.blit(image, image_rect)
+        money_text = large_font.render("$ " + str(money), True, Green)
+        money_text_rect = money_text.get_rect()
+        money_text_rect.topleft=(1740, 40)
+        screen.blit(money_text, money_text_rect)
         if keys[K_p]:
             if keys[K_0]:
                 world_one()
