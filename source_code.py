@@ -1741,7 +1741,6 @@ def world_one(x=100, y=900):
     global image, jumping, up, down, player_health, player_total_health, walk_speed, money, running, slider_dragging, open_settings, current_cursor, fps, current_screen, mouse_position, walking
     if walking == False:
         pass
-    screen.blit(menu_background, menu_background_rect)
     encounter_loading()
     screen.blit(world_one_background, (0, 0))
     image_rect = image.get_rect()
