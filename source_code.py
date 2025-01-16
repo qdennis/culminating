@@ -435,6 +435,1277 @@ def block(slot):
         return True
     else:
         return False
+def punch(slot):
+   global move_one, move_two, move_three, move_four
+   global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+   global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+   global move_one_color, move_two_color, move_three_color, move_four_color
+   global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+   global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+   global move_one_type, move_two_type, move_three_type, move_four_type
+   if slot == "1"  :
+       move_one = "Punch"
+       move_one_color = Darker_Blue
+       move_one_speed = 1
+       move_one_damage = 20
+       move_one_cooldown = 2000
+       move_one_defense = 1
+       move_one_type = "Attack"
+      
+       return True
+   elif slot == "2"  :
+       move_two = "Punch"
+       move_two_color = Darker_Blue
+       move_two_speed = 1
+       move_two_damage = 20
+       move_two_cooldown = 2000
+       move_two_defense = 1
+       move_two_type = "Attack"
+        
+       return True
+   elif slot == "3"  :
+       move_three = "Punch"
+       move_three_color = Darker_Blue
+       move_three_speed = 1
+       move_three_damage = 20
+       move_three_cooldown = 2000
+       move_three_defense = 1
+       move_three_type = "Attack"
+        
+       return True
+   elif slot == "4"  :
+       move_four = "Punch"
+       move_four_color = Darker_Blue
+       move_four_speed = 1
+       move_four_damage = 20
+       move_four_cooldown = 2000
+       move_four_defense = 1
+       move_four_type = "Attack"
+        
+       return True
+   else:
+       return False
+
+def side_block(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+        move_one = "Side Block"
+        move_one_color = Green
+        move_one_speed = 1
+        move_one_damage = 15
+        move_one_cooldown = 3000
+        move_one_defense = 0.5
+        move_one_type = "Defend"
+         
+        return True
+    elif slot == "2"  :
+        move_one = "Side Block"
+        move_one_color = Green
+        move_one_speed = 1
+        move_one_damage = 15
+        move_one_cooldown = 3000
+        move_one_defense = 0.5
+        move_one_type = "Defend"
+         
+        return True
+    elif slot == "3"  :
+        move_one = "Side Block"
+        move_one_color = Green
+        move_one_speed = 1
+        move_one_damage = 15
+        move_one_cooldown = 3000
+        move_one_defense = 0.5
+        move_one_type = "Defend"
+         
+        return True
+    elif slot == "4"  :
+        move_one = "Side Block"
+        move_one_color = Green
+        move_one_speed = 1
+        move_one_damage = 15
+        move_one_cooldown = 3000
+        move_one_defense = 0.5
+        move_one_type = "Defend"
+         
+        return True
+    else:
+        return False
+
+def round_house_kick(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Roundhouse Kick"
+       move_one_color = Orange
+       move_one_speed = 1
+       move_one_damage = 40
+       move_one_cooldown = 4000
+       move_one_defense = 1
+       move_one_type = "Attack"
+        
+       return True
+    elif slot == "2"  :
+       move_two = "Roundhouse Kick"
+       move_two_color = Orange
+       move_two_speed = 1
+       move_two_damage = 40
+       move_two_cooldown = 4000
+       move_two_defense = 1
+       move_two_type = "Attack"
+   
+       return True
+    elif slot == "3"  :
+       move_three = "Roundhouse Kick"
+       move_three_color = Orange
+       move_three_speed = 1
+       move_three_damage = 40
+       move_three_cooldown = 4000
+       move_three_defense = 1
+       move_three_type = "Attack"
+      
+       return True
+    elif slot == "4"  :
+       move_four = "Roundhouse Kick"
+       move_four_color = Orange
+       move_four_speed = 1
+       move_four_damage = 40
+       move_four_cooldown = 4000
+       move_four_defense = 1
+       move_four_type = "Attack"
+   
+       return True
+    else:
+       return False
+
+def back_fist(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Back Fist"
+       move_one_color = Darker_Blue
+       move_one_speed = 1
+       move_one_damage = 35
+       move_one_cooldown = 3500
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Back Fist"
+       move_two_color = Darker_Blue
+       move_two_speed = 1
+       move_two_damage = 35
+       move_two_cooldown = 3500
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3" :
+       move_three = "Back Fist"
+       move_three_color = Darker_Blue
+       move_three_speed = 1
+       move_three_damage = 35
+       move_three_cooldown = 3500
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4" : 
+       move_four = "Back Fist"
+       move_four_color = Darker_Blue
+       move_four_speed = 1
+       move_four_damage = 35
+       move_four_cooldown = 3500
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+
+def slap(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Slap"
+       move_one_color = Darker_Red
+       move_one_speed = 1
+       move_one_damage = 15
+       move_one_cooldown = 1500
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Slap"
+       move_two_color = Darker_Red
+       move_two_speed = 1
+       move_two_damage = 15
+       move_two_cooldown = 1500
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Slap"
+       move_three_color = Darker_Red
+       move_three_speed = 1
+       move_three_damage = 15
+       move_three_cooldown = 1500
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Slap"
+       move_four_color = Darker_Red
+       move_four_speed = 1
+       move_four_damage = 15
+       move_four_cooldown = 1500
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+def tackle(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Tackle"
+       move_one_color = Orange
+       move_one_speed = 1
+       move_one_damage = 50
+       move_one_cooldown = 4000
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Tackle"
+       move_two_color = Orange
+       move_two_speed = 1
+       move_two_damage = 50
+       move_two_cooldown = 4000
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Tackle"
+       move_three_color = Orange
+       move_three_speed = 1
+       move_three_damage = 50
+       move_three_cooldown = 4000
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4" : 
+       move_four = "Tackle"
+       move_four_color = Orange
+       move_four_speed = 1
+       move_four_damage = 50
+       move_four_cooldown = 4000
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+    
+def one_inch_punch(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "1 Inch Punch"
+       move_one_color = Darker_Blue
+       move_one_speed = 1
+       move_one_damage = 60
+       move_one_cooldown = 2500
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2":
+       move_two = "1 Inch Punch"
+       move_two_color = Darker_Blue 
+       move_two_speed = 1
+       move_two_damage = 60
+       move_two_cooldown = 2500
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3":
+       move_three = "1 Inch Punch"
+       move_three_color = Darker_Blue 
+       move_three_speed = 1
+       move_three_damage = 60
+       move_three_cooldown = 2500
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4" : 
+       move_four = "1 Inch Punch "
+       move_four_color = Darker_Blue
+       move_four_speed = 1
+       move_four_damage = 60
+       move_four_cooldown = 2500
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+def double_punch(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Double Punch"
+       move_one_color = Darker_Blue
+       move_one_speed = 1
+       move_one_damage = 60
+       move_one_cooldown = 3000
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Double Punch"
+       move_two_color = Darker_Blue
+       move_two_speed = 1
+       move_two_damage = 60
+       move_two_cooldown = 3000
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Double Punch"
+       move_three_color = Darker_Blue
+       move_three_speed = 1
+       move_three_damage = 60
+       move_three_cooldown = 3000
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Double Punch"
+       move_four_color = Darker_Blue
+       move_four_speed = 1
+       move_four_damage = 60
+       move_four_cooldown = 3000
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+
+def side_kick(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Side Kick"
+       move_one_color = Orange
+       move_one_speed = 1
+       move_one_damage = 45
+       move_one_cooldown = 2000
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Side Kick"
+       move_two_color = Orange
+       move_two_speed = 1
+       move_two_damage = 45
+       move_two_cooldown = 2000
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Side Kick"
+       move_three_color = Orange
+       move_three_speed = 1
+       move_three_damage = 45
+       move_three_cooldown = 2000
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Side Kick"
+       move_four_color = Orange
+       move_four_speed = 1
+       move_four_damage = 45
+       move_four_cooldown = 2000
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+
+def low_block(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Low Block"
+       move_one_color = Green
+       move_one_speed = 1
+       move_one_damage = 30
+       move_one_cooldown = 2000
+       move_one_defense = 0.6
+       move_one_type = "Defend"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Low Block"
+       move_two_color = Green
+       move_two_speed = 1
+       move_two_damage = 30
+       move_two_cooldown = 2000
+       move_two_defense = 0.6
+       move_two_type = "Defend"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Low Block"
+       move_three_color = Green
+       move_three_speed = 1
+       move_three_damage = 30
+       move_three_cooldown = 2000
+       move_three_defense = 0.6
+       move_three_type = "Defend"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Low Block"
+       move_four_color = Green
+       move_four_speed = 1
+       move_four_damage = 30
+       move_four_cooldown = 2000
+       move_four_defense = 0.6
+       move_four_type = "Defend"
+       
+       return True
+    else:
+       return False
+
+def middle_block(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Middle Block"
+       move_one_color = Green
+       move_one_speed = 1
+       move_one_damage = 25
+       move_one_cooldown = 2500
+       move_one_defense = 0.7
+       move_one_type = "Defend"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Middle Block"
+       move_two_color = Green
+       move_two_speed = 1
+       move_two_damage = 25
+       move_two_cooldown = 2500
+       move_two_defense = 0.7
+       move_two_type = "Defend"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Middle Block"
+       move_three_color = Green
+       move_three_speed = 1
+       move_three_damage = 25
+       move_three_cooldown = 2500
+       move_three_defense = 0.7
+       move_three_type = "Defend"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Middle Block"
+       move_four_color = Green
+       move_four_speed = 1
+       move_four_damage = 25
+       move_four_cooldown = 2500
+       move_four_defense = 0.7
+       move_four_type = "Defend"
+       
+       return True
+    else:
+       return False
+
+def high_block(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "High Block"
+       move_one_color = Green
+       move_one_speed = 1
+       move_one_damage = 25
+       move_one_cooldown = 3000
+       move_one_defense = 0.8
+       move_one_type = "Defend"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "High Block"
+       move_two_color = Green
+       move_two_speed = 1
+       move_two_damage = 25
+       move_two_cooldown = 3000
+       move_two_defense = 0.8
+       move_two_type = "Defend"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Low Block"
+       move_three_color = Green
+       move_three_speed = 1
+       move_three_damage = 25
+       move_three_cooldown = 3000
+       move_three_defense = 0.8
+       move_three_type = "Defend"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Low Block"
+       move_four_color = Green
+       move_four_speed = 1
+       move_four_damage = 25
+       move_four_cooldown = 3000
+       move_four_defense = 0.8
+       move_four_type = "Defend"
+       
+       return True
+    else:
+       return False
+
+def cross_punch(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Cross Punch"
+       move_one_color = Darker_Blue
+       move_one_speed = 1
+       move_one_damage = 60
+       move_one_cooldown = 2500
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Cross Punch"
+       move_two_color = Darker_Blue
+       move_two_speed = 1
+       move_two_damage = 60
+       move_two_cooldown = 2500
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Cross Punch"
+       move_three_color = Darker_Blue
+       move_three_speed = 1
+       move_three_damage = 60
+       move_three_cooldown = 2500
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Cross Punch"
+       move_four_color = Darker_Blue
+       move_four_speed = 1
+       move_four_damage = 60
+       move_four_cooldown = 2500
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+
+def hook_punch(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Hook Punch"
+       move_one_color = Darker_Blue
+       move_one_speed = 1
+       move_one_damage = 90
+       move_one_cooldown = 2500
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Hook Punch"
+       move_two_color = Darker_Blue
+       move_two_speed = 1
+       move_two_damage = 90
+       move_two_cooldown = 2500
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Hook Punch"
+       move_three_color = Darker_Blue
+       move_three_speed = 1
+       move_three_damage = 90
+       move_three_cooldown = 2500
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Hook Punch"
+       move_four_color = Darker_Blue
+       move_four_speed = 1
+       move_four_damage = 90
+       move_four_cooldown = 2500
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+
+def karate_chop(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Karate Chop"
+       move_one_color = Darker_Blue
+       move_one_speed = 1
+       move_one_damage = 80
+       move_one_cooldown = 2000
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Karate Chop"
+       move_two_color = Darker_Blue
+       move_two_speed = 1
+       move_two_damage = 80
+       move_two_cooldown = 2000
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Karate Chop"
+       move_three_color = Darker_Blue
+       move_three_speed = 1
+       move_three_damage = 80
+       move_three_cooldown = 2000
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Karate Chop"
+       move_four_color = Darker_Blue
+       move_four_speed = 1
+       move_four_damage = 80
+       move_four_cooldown = 2000
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+
+def head_butt(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Head Butt"
+       move_one_color = Orange
+       move_one_speed = 1
+       move_one_damage = 120
+       move_one_cooldown = 3000
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Head Butt"
+       move_two_color = Orange
+       move_two_speed = 1
+       move_two_damage = 120
+       move_two_cooldown = 2000
+       move_two_defense = 1
+       move_two_type = "Attack"
+       return True
+    elif slot == "3"  :
+       move_three = "Head Butt"
+       move_three_color = Orange
+       move_three_speed = 1
+       move_three_damage = 120
+       move_three_cooldown = 2000
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Head Butt"
+       move_four_color = Orange
+       move_four_speed = 1
+       move_four_damage = 120
+       move_four_cooldown = 2000
+       move_four_defense = 1
+       move_four_type = "Attack"
+       return True
+    else:
+       return False
+
+def jab(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Jab"
+       move_one_color = Darker_Red
+       move_one_speed = 1
+       move_one_damage = 30
+       move_one_cooldown = 300
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Jab"
+       move_two_color = Darker_Red
+       move_two_speed = 1
+       move_two_damage = 30
+       move_two_cooldown = 300
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Jab"
+       move_three_color = Darker_Red
+       move_three_speed = 1
+       move_three_damage = 30
+       move_three_cooldown = 300
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Jab"
+       move_four_color = Darker_Red
+       move_four_speed = 1
+       move_four_damage = 30
+       move_four_cooldown = 300
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+
+def knife_hand_strike(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Knife Hand Strike"
+       move_one_color = Darker_Blue
+       move_one_speed = 1
+       move_one_damage = 95
+       move_one_cooldown = 1000
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Knife Hand Strike"
+       move_two_color = Darker_Blue
+       move_two_speed = 1
+       move_two_damage = 95
+       move_two_cooldown = 1000
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Knife Hand Strike"
+       move_three_color = Darker_Blue
+       move_three_speed = 1
+       move_three_damage = 95
+       move_three_cooldown = 1000
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Knife Hand Strike"
+       move_four_color = Darker_Blue
+       move_four_speed = 1
+       move_four_damage = 95
+       move_four_cooldown = 1000
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+
+def tornado_kick(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Tornado Kick"
+       move_one_color = Darker_Red
+       move_one_speed = 1
+       move_one_damage = 110
+       move_one_cooldown = 1
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Tornado Kick"
+       move_two_color = Darker_Red
+       move_two_speed = 1
+       move_two_damage = 110
+       move_two_cooldown = 1000
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Tornado Kick"
+       move_three_color = Darker_Red
+       move_three_speed = 1
+       move_three_damage = 110
+       move_three_cooldown = 1000
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Tornado Kick"
+       move_four_color = Darker_Red
+       move_four_speed = 1
+       move_four_damage = 110
+       move_four_cooldown = 1000
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+    
+def five_hundred_forty_kick(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "540 Kick"
+       move_one_color = Darker_Red
+       move_one_speed = 1
+       move_one_damage = 150
+       move_one_cooldown = 1500
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "540 Kick"
+       move_two_color = Darker_Red
+       move_two_speed = 1
+       move_two_damage = 150
+       move_two_cooldown = 1500
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "540 Kick"
+       move_three_color = Darker_Red
+       move_three_speed = 1
+       move_three_damage = 150
+       move_three_cooldown = 1500
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "540 Kick"
+       move_four_color = Darker_Red
+       move_four_speed = 1
+       move_four_damage = 150
+       move_four_cooldown = 1500
+       move_four_defense = 1
+       move_four_type = "Attack"
+       
+       return True
+    else:
+       return False
+
+def ult_force_palm_block_def(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Force Palm Block"
+       move_one_color = Green
+       move_one_speed = 1
+       move_one_damage = 60
+       move_one_cooldown = 1000
+       move_one_defense = 0.8
+       move_one_type = "Defend"
+       
+       return True
+    elif slot == "2"  :
+       move_two = "Force Palm Block"
+       move_two_color = Green
+       move_two_speed = 1
+       move_two_damage = 60
+       move_two_cooldown = 1000
+       move_two_defense = 0.8
+       move_two_type = "Defend"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Force Palm Block"
+       move_three_color = Green
+       move_three_speed = 1
+       move_three_damage = 60
+       move_three_cooldown = 1000
+       move_three_defense = 0.8
+       move_three_type = "Defend"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Force Palm Block"
+       move_four_color = Green
+       move_four_speed = 1
+       move_four_damage = 60
+       move_four_cooldown = 1000
+       move_four_defense = 0.8
+       move_four_type = "Defend"
+       
+       return True
+    else:
+       return False
+
+def ult_uppercut_off(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1"  :
+       move_one = "Uppercut"
+       move_one_color = Darker_Red
+       move_one_speed = 1
+       move_one_damage = 120
+       move_one_cooldown = 1000
+       move_one_defense = 1
+       move_one_type = "Attack"
+       
+       return True
+    elif slot == "2" : 
+       move_two = "Uppercut"
+       move_two_color = Darker_Red
+       move_two_speed = 1
+       move_two_damage = 120
+       move_two_cooldown = 1000
+       move_two_defense = 1
+       move_two_type = "Attack"
+       
+       return True
+    elif slot == "3"  :
+       move_three = "Uppercut"
+       move_three_color = Darker_Red
+       move_three_speed = 1
+       move_three_damage = 120
+       move_three_cooldown = 1000
+       move_three_defense = 1
+       move_three_type = "Attack"
+       
+       return True
+    elif slot == "4"  :
+       move_four = "Uppercut"
+       move_four_color = Darker_Red
+       move_four_speed = 1
+       move_four_damage = 120
+       move_four_cooldown = 1000
+       move_four_defense = 1
+       move_four_type = "Attack"
+        
+       return True
+    else:
+       return False
+
+def ult_flying_slide_kick_sp(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1":
+       move_one = "Flying Slide Kick"
+       move_one_color = Darker_Blue
+       move_one_speed = 1
+       move_one_damage = 80
+       move_one_cooldown = 500
+       move_one_defense = 1
+       move_one_type = "Attack"
+        
+       return True
+    elif slot == "2"  :
+       move_two = "Flying Slide Kick"
+       move_two_color = Darker_Blue
+       move_two_speed = 1
+       move_two_damage = 80
+       move_two_cooldown = 500
+       move_two_defense = 1
+       move_two_type = "Attack"
+        
+       return True
+    elif slot == "3"  :
+       move_three = "Flying Slide Kick"
+       move_three_color = Darker_Blue
+       move_three_speed = 1
+       move_three_damage = 80
+       move_three_cooldown = 500
+       move_three_defense = 1
+       move_three_type = "Attack"
+        
+       return True
+    elif slot == "4"  :
+       move_four = "Flying Slide Kick"
+       move_four_color = Darker_Blue
+       move_four_speed = 1
+       move_four_damage = 80
+       move_four_cooldown = 500
+       move_four_defense = 1
+       move_four_type = "Attack"
+        
+       return True
+    else:
+       return False
+
+def ult_spear_hand_strike_sr(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1":
+       move_one = "Spear Hand Strike"
+       move_one_color = Darker_Blue
+       move_one_speed = 1
+       move_one_damage = 60
+       move_one_cooldown = 5000
+       move_one_defense = 1
+       move_one_type = "Attack"
+        
+       return True
+    elif slot == "2"  :
+       move_two = "Spear Hand Strike"
+       move_two_color = Darker_Blue
+       move_two_speed = 1
+       move_two_damage = 60
+       move_two_cooldown = 500
+       move_two_defense = 1
+       move_two_type = "Attack"
+        
+       return True
+    elif slot == "3"  :
+       move_three = "Spear Hand Strike"
+       move_three_color = Darker_Blue
+       move_three_speed = 1
+       move_three_damage = 60
+       move_three_cooldown = 500
+       move_three_defense = 1
+       move_three_type = "Attack"
+        
+       return True
+    elif slot == "4"  :
+       move_four = "Spear Hand Strike"
+       move_four_color = Darker_Blue
+       move_four_speed = 1
+       move_four_damage = 60
+       move_four_cooldown = 500
+       move_four_defense = 1
+       move_four_type = "Attack"
+        
+       return True
+    else:
+       return False
+
+def ult_tiger_elbow_Strike(slot):
+    global move_one, move_two, move_three, move_four
+    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
+    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
+    global move_one_color, move_two_color, move_three_color, move_four_color
+    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
+    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
+    global move_one_type, move_two_type, move_three_type, move_four_type
+    if slot == "1":
+       move_one = "Tiger Elbow Strike"
+       move_one_color = Orange
+       move_one_speed = 1
+       move_one_damage = 300
+       move_one_cooldown = 1000
+       move_one_defense = 1
+       move_one_type = "Attack"
+        
+       return True
+    elif slot == "2"  :
+       move_two = "Tiger Elbow Strike"
+       move_two_color = Orange
+       move_two_speed = 1
+       move_two_damage = 300
+       move_two_cooldown = 1000
+       move_two_defense = 1
+       move_two_type = "Attack"
+        
+       return True
+    elif slot == "3"  :
+       move_three = "Tiger Elbow Strike"
+       move_three_color = Orange
+       move_three_speed = 1
+       move_three_damage = 300
+       move_three_cooldown = 1000
+       move_three_defense = 1
+       move_three_type = "Attack"
+        
+       return True
+    elif slot == "4"  :
+       move_four = "Tiger Elbow Strike"
+       move_four_color = Orange
+       move_four_speed = 1
+       move_four_damage = 300
+       move_four_cooldown = 1000
+       move_four_defense = 1
+       move_four_type = "Attack"
+        
+       return True
+    else:
+       return False
+
 
 # keybind selection
 def selecting_moves_menu():
