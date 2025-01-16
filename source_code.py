@@ -108,7 +108,8 @@ city_one_background = pygame.image.load('images2/city_one_background.png')
 city_one_background = pygame.transform.scale(city_one_background, (width, height))
 selecting_moves_background = pygame.image.load('images2/selecting_moves_background.png')
 selecting_moves_background = pygame.transform.scale(selecting_moves_background, (width, height))
-
+store_background = pygame.image.load('1d8d0afd6b8342d5b595090aa2ad05c1.jpg')
+store_background = pygame.transform.scale(store_background, (width, height))
 # colours
 
 Red = (255, 0, 0)
