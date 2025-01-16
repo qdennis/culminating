@@ -108,8 +108,9 @@ city_one_background = pygame.image.load('images2/city_one_background.png')
 city_one_background = pygame.transform.scale(city_one_background, (width, height))
 selecting_moves_background = pygame.image.load('images2/selecting_moves_background.png')
 selecting_moves_background = pygame.transform.scale(selecting_moves_background, (width, height))
-store_background = pygame.image.load('1d8d0afd6b8342d5b595090aa2ad05c1.jpg')
+store_background = pygame.image.load('images2/store_background.jpg')
 store_background = pygame.transform.scale(store_background, (width, height))
+
 # colours
 
 Red = (255, 0, 0)
@@ -122,14 +123,17 @@ Baby_Green = (178, 255, 102)
 Blue = (0, 0, 255)
 Darker_Blue = (78, 96, 204)
 Purple = (255, 0, 255)
-Brown = (139, 69, 19)
+
 Black = (0, 0, 0)
 White = (255, 255, 255)
+
 Grey = (169, 169, 169)
 Dark_Grey = (56, 56, 56)
 Darker_Grey = (139, 139, 139)
+
 gold = (255, 215, 0)
 dark_brown = (101, 67, 33)
+Brown = (139, 69, 19)
 chest_width = 100
 chest_height = 100
 chest_rect = pygame.Rect(960 - chest_width // 2, 540 - chest_height // 2, chest_width, chest_height)
@@ -437,57 +441,6 @@ def block(slot):
         return True
     else:
         return False
-def punch(slot):
-   global move_one, move_two, move_three, move_four
-   global move_one_speed, move_two_speed, move_three_speed, move_four_speed
-   global move_one_damage, move_two_damage, move_three_damage, move_four_damage
-   global move_one_color, move_two_color, move_three_color, move_four_color
-   global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
-   global move_one_defense, move_two_defense, move_three_defense, move_four_defense
-   global move_one_type, move_two_type, move_three_type, move_four_type
-   if slot == "1"  :
-       move_one = "Punch"
-       move_one_color = Darker_Blue
-       move_one_speed = 1
-       move_one_damage = 20
-       move_one_cooldown = 2000
-       move_one_defense = 1
-       move_one_type = "Attack"
-      
-       return True
-   elif slot == "2"  :
-       move_two = "Punch"
-       move_two_color = Darker_Blue
-       move_two_speed = 1
-       move_two_damage = 20
-       move_two_cooldown = 2000
-       move_two_defense = 1
-       move_two_type = "Attack"
-        
-       return True
-   elif slot == "3"  :
-       move_three = "Punch"
-       move_three_color = Darker_Blue
-       move_three_speed = 1
-       move_three_damage = 20
-       move_three_cooldown = 2000
-       move_three_defense = 1
-       move_three_type = "Attack"
-        
-       return True
-   elif slot == "4"  :
-       move_four = "Punch"
-       move_four_color = Darker_Blue
-       move_four_speed = 1
-       move_four_damage = 20
-       move_four_cooldown = 2000
-       move_four_defense = 1
-       move_four_type = "Attack"
-        
-       return True
-   else:
-       return False
-
 def side_block(slot):
     global move_one, move_two, move_three, move_four
     global move_one_speed, move_two_speed, move_three_speed, move_four_speed
@@ -507,33 +460,33 @@ def side_block(slot):
          
         return True
     elif slot == "2"  :
-        move_one = "Side Block"
-        move_one_color = Green
-        move_one_speed = 1
-        move_one_damage = 15
-        move_one_cooldown = 3000
-        move_one_defense = 0.5
-        move_one_type = "Defend"
+        move_two = "Side Block"
+        move_two_color = Green
+        move_two_speed = 1
+        move_two_damage = 15
+        move_two_cooldown = 3000
+        move_two_defense = 0.5
+        move_two_type = "Defend"
          
         return True
     elif slot == "3"  :
-        move_one = "Side Block"
-        move_one_color = Green
-        move_one_speed = 1
-        move_one_damage = 15
-        move_one_cooldown = 3000
-        move_one_defense = 0.5
-        move_one_type = "Defend"
+        move_three = "Side Block"
+        move_three_color = Green
+        move_three_speed = 1
+        move_three_damage = 15
+        move_three_cooldown = 3000
+        move_three_defense = 0.5
+        move_three_type = "Defend"
          
         return True
     elif slot == "4"  :
-        move_one = "Side Block"
-        move_one_color = Green
-        move_one_speed = 1
-        move_one_damage = 15
-        move_one_cooldown = 3000
-        move_one_defense = 0.5
-        move_one_type = "Defend"
+        move_four = "Side Block"
+        move_four_color = Green
+        move_four_speed = 1
+        move_four_damage = 15
+        move_four_cooldown = 3000
+        move_four_defense = 0.5
+        move_four_type = "Defend"
          
         return True
     else:
@@ -1249,57 +1202,6 @@ def head_butt(slot):
     else:
        return False
 
-def jab(slot):
-    global move_one, move_two, move_three, move_four
-    global move_one_speed, move_two_speed, move_three_speed, move_four_speed
-    global move_one_damage, move_two_damage, move_three_damage, move_four_damage
-    global move_one_color, move_two_color, move_three_color, move_four_color
-    global move_one_cooldown, move_two_cooldown, move_three_cooldown, move_four_cooldown
-    global move_one_defense, move_two_defense, move_three_defense, move_four_defense
-    global move_one_type, move_two_type, move_three_type, move_four_type
-    if slot == "1"  :
-       move_one = "Jab"
-       move_one_color = Darker_Red
-       move_one_speed = 1
-       move_one_damage = 30
-       move_one_cooldown = 300
-       move_one_defense = 1
-       move_one_type = "Attack"
-       
-       return True
-    elif slot == "2"  :
-       move_two = "Jab"
-       move_two_color = Darker_Red
-       move_two_speed = 1
-       move_two_damage = 30
-       move_two_cooldown = 300
-       move_two_defense = 1
-       move_two_type = "Attack"
-       
-       return True
-    elif slot == "3"  :
-       move_three = "Jab"
-       move_three_color = Darker_Red
-       move_three_speed = 1
-       move_three_damage = 30
-       move_three_cooldown = 300
-       move_three_defense = 1
-       move_three_type = "Attack"
-       
-       return True
-    elif slot == "4"  :
-       move_four = "Jab"
-       move_four_color = Darker_Red
-       move_four_speed = 1
-       move_four_damage = 30
-       move_four_cooldown = 300
-       move_four_defense = 1
-       move_four_type = "Attack"
-       
-       return True
-    else:
-       return False
-
 def knife_hand_strike(slot):
     global move_one, move_two, move_three, move_four
     global move_one_speed, move_two_speed, move_three_speed, move_four_speed
@@ -1707,8 +1609,6 @@ def ult_tiger_elbow_Strike(slot):
        return True
     else:
        return False
-
-
 # keybind selection
 def selecting_moves_menu():
     global selecting_moves, question, Punch, slot_number, fps, running
@@ -2101,7 +2001,6 @@ def world_two(x=100, y=940):
                 down = 0
                 up = 0
                 jumping = False
-
         if 200 <= image_rect.x <= 390:  
             pygame.draw.rect(screen, Dark_Grey, (150, 600, 300, 150))  
             pygame.draw.rect(screen, Darker_Grey, (150, 600, 300, 150), width=10)  
@@ -2115,7 +2014,6 @@ def world_two(x=100, y=940):
             screen.blit(store_text, store_text_rect)
             if keys[K_e]:
                 store()
-        
         if image_rect.x >= 1150 and image_rect.x <= 1350:
             pygame.draw.rect(screen, Dark_Grey, (950, 600, 300, 150))
             pygame.draw.rect(screen, Darker_Grey, (950, 600, 300, 150), width = 10)
@@ -2176,50 +2074,6 @@ def world_two(x=100, y=940):
         screen.blit(current_cursor, mouse_position)
         pygame.display.flip()
         clock.tick(fps)
-
-def store(x=100, y=940):
-    global image
-    shopping = True
-    exit_button_rect = pygame.Rect(x, y, 200, 80)  
-    exit_button_color = (200, 0, 0)  
-    exit_button_hover_color = (255, 50, 50)  
-    font = pygame.font.Font(None, 48)  
-    button_text = font.render("Exit", True, (255, 255, 255))
-    chest_content = None
-
-    while shopping:
-        screen.blit(store_background, (0, 0))
-
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                shopping = False
-            if event.type == pygame.MOUSEBUTTONDOWN:
-                if chest_rect.collidepoint(event.pos):
-                    chest_content = random.choices(items, weights=rarity, k=1)[0]
-                    print(f"Chest contains: {chest_content}")
-                elif exit_button_rect.collidepoint(event.pos):
-                    shopping = False
-
-        pygame.draw.rect(screen, dark_brown, lid_rect)
-        pygame.draw.rect(screen, Brown, chest_rect)
-        pygame.draw.rect(screen, gold, lock_rect)
-
-        if chest_content is not None:
-            content_text = font.render(f"You got: {chest_content}", True, black)
-            content_text_rect = content_text.get_rect(center=(960, 540))
-            screen.blit(content_text, content_text_rect)
-
-        mouse_pos = pygame.mouse.get_pos()
-        if exit_button_rect.collidepoint(mouse_pos):
-            pygame.draw.rect(screen, exit_button_hover_color, exit_button_rect)
-        else:
-            pygame.draw.rect(screen, exit_button_color, exit_button_rect)
-
-     
-        text_rect = button_text.get_rect(center=exit_button_rect.center)
-        screen.blit(button_text, text_rect)
-        pygame.display.flip()
-        clock.tick(60)
 def city_one(x=100, y=940):
     global image
     global jumping
@@ -2422,7 +2276,7 @@ def enemy_one_stats():
     enemy_health = enemy_total_health
 
     # Image for enemy
-    enemy = pygame.image.load('images2/image-removebg-preview (13).png')
+    enemy = pygame.image.load('images2/squishy.png')
     enemy = pygame.transform.scale(enemy, (261, 239))
     enemy_rect = image.get_rect()
     enemy_rect.center = (1400, 300)
@@ -2963,14 +2817,14 @@ def fighting():
                 pass
             elif enemy_health > 0:
                 if keys[pygame.K_1]:
-                    speed = move_one_speed
+                    speed = move_one_speed # Applies stats from move one
                     block_defense = move_one_defense
                     if move_one_type == "Attack":
-                        attack_animation()
-                        damage_dealt = move_one_damage
+                        attack_animation() # attacking animation
+                        damage_dealt = move_one_damage # applies damage from move one
                     elif move_one_type == "Defend":
                         damage_dealt = move_one_damage
-                    attack_one_cooldown = False
+                    attack_one_cooldown = False # resets cooldown time
                     current_time_1 = pygame.time.get_ticks()
         else:
                 new_time_1 = pygame.time.get_ticks()
@@ -3177,6 +3031,49 @@ def heal():
         pygame.display.flip()
         clock.tick(60)
 
+def store(x=100, y=940):
+    global image
+    shopping = True
+    exit_button_rect = pygame.Rect(x, y, 200, 80)  
+    exit_button_color = (200, 0, 0)  
+    exit_button_hover_color = (255, 50, 50)  
+    font = pygame.font.Font(None, 48)  
+    button_text = font.render("Exit", True, (255, 255, 255))
+    chest_content = None
+
+    while shopping:
+        screen.blit(store_background, (0, 0))
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                shopping = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if chest_rect.collidepoint(event.pos):
+                    chest_content = random.choices(items, weights=rarity, k=1)[0]
+                    print(f"Chest contains: {chest_content}")
+                elif exit_button_rect.collidepoint(event.pos):
+                    shopping = False
+
+        pygame.draw.rect(screen, dark_brown, lid_rect)
+        pygame.draw.rect(screen, Brown, chest_rect)
+        pygame.draw.rect(screen, gold, lock_rect)
+
+        if chest_content is not None:
+            content_text = font.render(f"You got: {chest_content}", True, Black)
+            content_text_rect = content_text.get_rect(center=(960, 540))
+            screen.blit(content_text, content_text_rect)
+
+        mouse_pos = pygame.mouse.get_pos()
+        if exit_button_rect.collidepoint(mouse_pos):
+            pygame.draw.rect(screen, exit_button_hover_color, exit_button_rect)
+        else:
+            pygame.draw.rect(screen, exit_button_color, exit_button_rect)
+
+     
+        text_rect = button_text.get_rect(center=exit_button_rect.center)
+        screen.blit(button_text, text_rect)
+        pygame.display.flip()
+        clock.tick(60)
 # main code
 while running:
     clock.tick(fps)
