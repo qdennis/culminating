@@ -129,6 +129,7 @@ Grey = (169, 169, 169)
 Dark_Grey = (56, 56, 56)
 Darker_Grey = (139, 139, 139)
 gold = (255, 215, 0)
+dark_brown = (101, 67, 33)
 chest_width = 100
 chest_height = 100
 chest_rect = pygame.Rect(960 - chest_width // 2, 540 - chest_height // 2, chest_width, chest_height)
