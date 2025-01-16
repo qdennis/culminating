@@ -1056,7 +1056,7 @@ def enemy_one_stats():
 
     enemy_turn = True
     enemy_level = 5
-    enemy_name = "Jeffery"
+    enemy_name = "Squishy"
 
     # Stats for enemy
     enemy_attack_stat = 1 + enemy_level*.05
@@ -1133,19 +1133,19 @@ def enemy_two_stats():
     enemy_attack_three = False
     enemy_attack_four = False
 
-    enemy_damage_one = 40
+    enemy_damage_one = 60
     enemy_cooldown_one = 2000
     enemy_defense_one = 1
 
-    enemy_damage_two = 20
+    enemy_damage_two = 40
     enemy_cooldown_two = 2000
     enemy_defense_two = 1
 
-    enemy_damage_three = 5
+    enemy_damage_three = 10
     enemy_cooldown_three = 200
     enemy_defense_three = 1
 
-    enemy_damage_four = 10
+    enemy_damage_four = 20
     enemy_cooldown_four = 1000
     enemy_defense_four = 0.6
 def enemy_three_stats():
@@ -1165,7 +1165,7 @@ def enemy_three_stats():
     enemy_turn = True
 
     enemy_level = 12
-    enemy_name = "Kren's Goon"
+    enemy_name = "Morvak's Goon"
 
     enemy_attack_stat = 1 + enemy_level*.05
     enemy_defense_stat = 1 + enemy_level*.05
@@ -1185,11 +1185,11 @@ def enemy_three_stats():
     enemy_attack_four = False
 
     enemy_damage_one = 40
-    enemy_cooldown_one = 1000
+    enemy_cooldown_one = 500
     enemy_defense_one = 1
 
     enemy_damage_two = 20
-    enemy_cooldown_two = 1000
+    enemy_cooldown_two = 600
     enemy_defense_two = 1
 
     enemy_damage_three = 5
@@ -1197,7 +1197,7 @@ def enemy_three_stats():
     enemy_defense_three = 1
 
     enemy_damage_four = 10
-    enemy_cooldown_four = 1000
+    enemy_cooldown_four = 500
     enemy_defense_four = 0.6
 def boss_one_stats():
     global enemy_attack_one, enemy_attack_two, enemy_attack_three, enemy_attack_four
@@ -1216,7 +1216,7 @@ def boss_one_stats():
     enemy_turn = True
 
     enemy_level = 20
-    enemy_name = "Kren"
+    enemy_name = "Morvak"
 
     enemy_attack_stat = 1 + enemy_level*.05
     enemy_defense_stat = 1 + enemy_level*.05
@@ -1236,19 +1236,19 @@ def boss_one_stats():
     enemy_attack_three = False
     enemy_attack_four = False
 
-    enemy_damage_one = 40
+    enemy_damage_one = 60
     enemy_cooldown_one = 1000
     enemy_defense_one = 1
 
-    enemy_damage_two = 20
+    enemy_damage_two = 30
     enemy_cooldown_two = 1000
     enemy_defense_two = 1
 
-    enemy_damage_three = 5
+    enemy_damage_three = 10
     enemy_cooldown_three = 200
     enemy_defense_three = 1
 
-    enemy_damage_four = 10
+    enemy_damage_four = 15
     enemy_cooldown_four = 1000
     enemy_defense_four = 0.6
 
