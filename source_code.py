@@ -121,13 +121,30 @@ Baby_Green = (178, 255, 102)
 Blue = (0, 0, 255)
 Darker_Blue = (78, 96, 204)
 Purple = (255, 0, 255)
-
+Brown = (139, 69, 19)
 Black = (0, 0, 0)
 White = (255, 255, 255)
-
 Grey = (169, 169, 169)
 Dark_Grey = (56, 56, 56)
 Darker_Grey = (139, 139, 139)
+gold = (255, 215, 0)
+chest_width = 100
+chest_height = 100
+chest_rect = pygame.Rect(960 - chest_width // 2, 540 - chest_height // 2, chest_width, chest_height)
+
+lid_width = 200
+lid_height = 50
+lid_rect = pygame.Rect(960 - lid_width // 2, 540 - chest_height // 2 - lid_height, lid_width, lid_height)
+
+lock_width = 20
+lock_height = 40
+lock_rect = pygame.Rect(960 - chest_width // 2 + 40, 540 - chest_height // 2 + 30, lock_width, lock_height)
+
+
+
+items = ["Side Block", "Roundhouse Kick", "Back Fist", "Slap", "Tackle", "1 inch punch", "Double Punch", "Side Kick", "Low Block", "Middle Block", "High Block", "Cross Punch", "Hook Punch", "Karate Chop", "Head Butt", "Jab", "Knife Hand Strike", "Tornado Kick", "540 Kick", "Force Palm Block", "Uppercut", "Flying Slide Kick", "Spear Hand Strike", "Tiger Elbow Strike"]
+rarity = [60,60,60,60,60,45,45,45,45,45,45,35,35,35,35,35,10,10,10,1,1,1,1,1]
+chest_content = None
 
 # settings page
 settings_page = pygame.image.load('gui_images/settings_page.png')
@@ -811,6 +828,21 @@ def world_two(x=100, y=940):
                 down = 0
                 up = 0
                 jumping = False
+
+        if 200 <= image_rect.x <= 390:  
+            pygame.draw.rect(screen, Dark_Grey, (150, 600, 300, 150))  
+            pygame.draw.rect(screen, Darker_Grey, (150, 600, 300, 150), width=10)  
+            enter_text = small_font.render("Press E to", True, Black)
+            enter_text_rect = enter_text.get_rect()
+            enter_text_rect.topleft = ((300 - enter_text.get_width()) // 2 + 150, 650)  #
+            screen.blit(enter_text, enter_text_rect)
+            store_text = small_font.render("Enter Moves store", True, Black)
+            store_text_rect = store_text.get_rect()
+            store_text_rect.topleft = ((300 - store_text_rect.width) // 2 + 150, 675)  
+            screen.blit(store_text, store_text_rect)
+            if keys[K_e]:
+                store()
+        
         if image_rect.x >= 1150 and image_rect.x <= 1350:
             pygame.draw.rect(screen, Dark_Grey, (950, 600, 300, 150))
             pygame.draw.rect(screen, Darker_Grey, (950, 600, 300, 150), width = 10)
@@ -871,6 +903,50 @@ def world_two(x=100, y=940):
         screen.blit(current_cursor, mouse_position)
         pygame.display.flip()
         clock.tick(fps)
+
+def store(x=100, y=940):
+    global image
+    shopping = True
+    exit_button_rect = pygame.Rect(x, y, 200, 80)  
+    exit_button_color = (200, 0, 0)  
+    exit_button_hover_color = (255, 50, 50)  
+    font = pygame.font.Font(None, 48)  
+    button_text = font.render("Exit", True, (255, 255, 255))
+    chest_content = None
+
+    while shopping:
+        screen.blit(store_background, (0, 0))
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                shopping = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if chest_rect.collidepoint(event.pos):
+                    chest_content = random.choices(items, weights=rarity, k=1)[0]
+                    print(f"Chest contains: {chest_content}")
+                elif exit_button_rect.collidepoint(event.pos):
+                    shopping = False
+
+        pygame.draw.rect(screen, dark_brown, lid_rect)
+        pygame.draw.rect(screen, Brown, chest_rect)
+        pygame.draw.rect(screen, gold, lock_rect)
+
+        if chest_content is not None:
+            content_text = font.render(f"You got: {chest_content}", True, black)
+            content_text_rect = content_text.get_rect(center=(960, 540))
+            screen.blit(content_text, content_text_rect)
+
+        mouse_pos = pygame.mouse.get_pos()
+        if exit_button_rect.collidepoint(mouse_pos):
+            pygame.draw.rect(screen, exit_button_hover_color, exit_button_rect)
+        else:
+            pygame.draw.rect(screen, exit_button_color, exit_button_rect)
+
+     
+        text_rect = button_text.get_rect(center=exit_button_rect.center)
+        screen.blit(button_text, text_rect)
+        pygame.display.flip()
+        clock.tick(60)
 def city_one(x=100, y=940):
     global image
     global jumping
