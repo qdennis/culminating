@@ -3040,6 +3040,8 @@ def store(x=100, y=940):
     button_text = font.render("Exit", True, (255, 255, 255))
     chest_content = None
 
+    pygame.mouse.set_visible(True)  
+
     while shopping:
         screen.blit(store_background, (0, 0))
 
